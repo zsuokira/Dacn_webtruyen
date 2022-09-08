@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<head>
+    <head>
+        <!--Header-->
+        <title >A</title>
+       
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+    <link rel="icon" href="../../static/images/favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font Awesome CSS -->                  
+    <link rel="stylesheet" type="text/css" href="../../static/bower/Font-Awesome/css/all.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../static/mdbootstrap/css/bootstrap.min.css"/>
+    <!-- Material Design Bootstrap -->
+    <link href="../../static/mdbootstrap/css/mdb.min.css" rel="stylesheet">
+    <!--  Swiper CSS -->
+    <link rel="stylesheet" type="text/css" href="../../static/bower/swiper/dist/css/swiper.min.css"/>
+    <!--  Custom CSS -->
+    <link href="../../static/css/myWebStyle.css" rel="stylesheet" type="text/css"/>
+    <!--  Animation CSS -->
+    <link href="../../static/css/animationStyle.css" rel="stylesheet" type="text/css"/>
+    <!-- Jquery 3.2.1 -->
+    <script href="../../static/bower/jquery/dist/jquery.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+    <script href="../../static/bower/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <!--  Animate JavaScript -->
+    <link rel="stylesheet" type="text/css" href="../../static/bower/animate.css/animate.min.css">
+    <!--  Swiper JavaScript -->
+    <script type="text/javascript" href="../../static/bower/swiper/dist/js/swiper.min.js"></script>
+    <!-- JQueyUI CSS for Auto Complete -->
+    <link rel="stylesheet" type="text/css" href="../../static/bower/jquery-ui/themes/base/jquery-ui.css">
+    <!--jQuery Validation JavaScript-->
+    <script type="text/javascript" href="../../static/bower/jquery-validation/dist/jquery.validate.js"></script>
+    <!-- JQuery Lazy Load -->
+    <script type="text/javascript" href="../../static/bower/jquery-lazy/jquery.lazy.min.js"></script>
+    <script type="text/javascript" href="../../static/bower/jquery-lazy/jquery.lazy.plugins.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script href="../../static/mdbootstrap/js/popper.min.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Bootstrap JS -->
+    <script href="../../static/mdbootstrap/js/bootstrap.min.js"></script>
+    <!--jQuert UI-->
+    <script type="text/javascript" href="../../static/bower/jquery-ui/jquery-ui.js"></script>
+    <!-- Encrypt Aes -->
+    <script type="text/javascript" href="../../static/js/aes.js"></script>
+    <script type="text/javascript" href="../../static/js/pbkdf2.js"></script>
+    <script type="text/javascript" href="../../static/js/AesUtil.js"></script>
+    <!-- My Function JavaScript -->
+    <script type="text/javascript" href="../../static/js/myFunction.js"></script>
+    <!-- My JavaScript -->
+    <script type="text/javascript" href="../../static/js/myApp.js"></script>
+    <!-- My JavaScript -->
+    <script type="text/javascript" href="../../static/js/backToTop.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" href="../../static/mdbootstrap/js/mdb.min.js" defer></script>
+    <script>
+        // Tooltips Initialization
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    
+    </script>
+    <!--Angular JS-->
+    <!--Angular JS-->
+    <script href="../../static/bower/angular/angular.min.js"></script>
+    <!--Angular Sanitize JS-->
+    <script href="../../static/bower/angular-sanitize/angular-sanitize.min.js"></script>
+    <!--My AngularJS Controller-->
+    <script href="../../static/js/controller/homeController.js"></script>
+    <!--Home AngularJS Service-->
+    <script href="../../static/js/service/WebService.js"></script>
+</head>
+<body class="page-read body-home" ng-app="ngApp" ng-controller="chapterCtrl" ng-init="|init(${chapter.story.id}, ${chapter.id})|">
+<div class="page-wrapper">
+    <!--NavBar-->
+    <header class="truyen-header">
+        <nav class="navbar navbar-truyen">
+         <div class="container">
+                        <div class="navbar-header">
+                                <a href="#" class="navbar-logo hidden-sm hidden-xs"> <img
+                                        class="img-fluid" src="#" alt="">
+                                </a>
+                                <a href="#" class="navbar-logo hidden-sm hidden-xs"> 
+                                    <!-- <img class="img-fluid" src="../../static/images/logo.png" alt=""> -->
+                                </a>
+                            <a href="#" class="navbar-search-btn js-open-search-box-mobile d-md-block d-lg-none">
+                                <i class="truyen-icon icon-search"></i>
+                            </a>
+                            <div class="navbar-category">
+                                <button class="navbar-category-btn js-open-sidebar">
+                                                <span class="lines">
+                                                    <span class="line"></span>
+                                                    <span class="line"></span>
+                                                    <span class="line"></span>
+                                                </span>
+                                    <span class="hidden-xs hidden-sm">Danh Mục</span>
+                                </button>
+                                <ul class="navbar-category-list">
+                                    <li class="col-4 float-left">
+                                        <a href="#" title="Truyện Hoàn Thành">Truyện Hoàn Thành</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#" title="Truyện Mới">Truyện Mới</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#" title="Truyện Vip">Truyện Vip</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="navbar-category">
+                                <button class="navbar-category-btn js-open-sidebar">
+                                        <span class="lines">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                        </span>
+                                    <span class="hidden-xs hidden-sm">Thể loại</span>
+                                </button>
+                                <ul class="navbar-category-list">
+                                    <li class="col-4 float-left">
+                                        <a href="#">Tiên Hiệp</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#">Đô Thị</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#">Đời Thường</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#">Huyền Huyễn</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#">Võng Du</a>
+                                    </li>
+        
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="custom navbar-custom">
+                            <ul class="nav navbar-nav navbar-right" style="flex-direction: row;">
+                                <li>
+                                    <div class="search-block">
+                                        <div class="actions">
+                                            <button type="submit" title="Tìm kiếm"
+                                                    class="search-toggle-btn" id="js-search-toggle">
+                                                <i class="truyen-icon icon-search"></i>
+                                            </button>
+                                        </div>
+                                        <form id="js-search-panel" class="search-panel" action="#" method="POST">
+                                            <div class="txtDiv">
+                                                <input type="text" name="txtKeyword" id="txtKeyword" value=""
+                                                       placeholder="Tên truyện" class="form-control"
+                                                       autocomplete="off" required
+                                                       oninvalid="this.setCustomValidity('Bạn chưa nhập gì để tìm kiếm!')">
+                                                <button class="btn btn-search mt-0" type="submit">
+                                                    <i class="truyen-icon icon-search-primary"></i>
+                                                </button>
+                                                <ul id="ulNoMatch"
+                                                    class="ui-autocomplete ui-menu ui-widget1 ui-widget1-content ui-corner-all"
+                                                    role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 16;display: none; width:   150px;">
+                                                    <li class="ui-menu-item" role="menuitem">
+                                                        <a class="ui-corner-all" tabindex="-1">Không Có Truyện Phù Hợp </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li >
+                                    <div class="user-block h-100">
+                                        <i class="truyen-icon icon-user"></i>
+                                        <a href="#"> Đăng nhập </a>
+                                        <a class="diver disabled">|</a>
+                                        <a href="#"> Đăng ký </a>
+                                    </div>
+                                </li>
+                                <li class="dropdown" >
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                       aria-haspopup="true" aria-expanded="false">
+                                        <i class="truyen-icon icon-user"></i>
+                                        <span class="truyen-login-title" ></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li ><a href="#">Trang Quản Lý</a></li>
+                                        <li><a href="#">Hồ Sơ</a></li>
+                                        <li><a href="#">Truyện Theo Dõi</a></li>
+                                        <li><a href="#">Quản Lý Truyện</a></li>
+                                        <li><a href="#">Nạp Đậu</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li><a href="#">Thoát</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        </header>
+
+    <!--Body-->
+    <div class="truyen-main">
+        <div class="truyen-breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb" style="background-color: inherit">
+                    <li class="breadcrumb-item">
+                        <a property="item" typeof="WebPage"href="#">
+                            <span property="name">Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="#">Kẻ theo đuổi ánh sáng</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Chương 1: 2 Con mèo đánh nhau.
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="truyen-div div-read-info">
+            <div class="container">
+                <div class="read-info-block text-center">
+                    <h1 class="title">
+                        <a >Chương 1: 2 Con mèo đánh nhau.</a>
+                    </h1>
+                    <ul class="list-unstyled meta">
+                        <li>
+                            <a class="author js-popover" data-toggle="popover" data-target="#js-popover-read-author" data-placement="bottom" data-original-title="">
+                                <div class="avatar">
+                                    <img class="img-fluid lazyload"  src="../../static/images/avt.jpg">
+                                </div>
+                                <span >Meo Meo đại lão</span>
+                            </a>
+                        </li>
+                        <li>
+                            <span class="item-icon">
+                                <i class="truyen-icon icon-eye-grey"></i>
+                            </span> <span >200</span> lượt xem
+                        </li>
+                        <li>
+                            <span class="item-icon">
+                                <i class="truyen-icon icon-list-grey"></i>
+                            </span>
+                            <span >3000 Chữ</span>
+                        </li>
+                        <li>
+                            <span class="item-icon">
+                                <i class="truyen-icon icon-time-grey"></i>
+                            </span>
+                            <span >3 giờ trước</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="truyen-div div-read-container">
+            <div class="container">
+                <div class="truyen-read-block">
+                    <div class="truyen-read-navigation text-center">
+                        <a href="#"
+                           class="btn btn-primary" 
+                           data-toggle="tooltip" data-placement="bottom" title="Chương trước">
+                            <span class="btn-icon"> <i class="truyen-icon icon-prev-bold"></i> </span>
+                        </a>
+                        <a href="#" class="btn btn-transparent btn-outline-primary waves-effect">
+                            <span class="btn-icon js-tooltip " data-toggle="tooltip" data-placement="bottom"
+                                  title="Mục lục"> <i class="truyen-icon icon-list"></i> </span> </a>
+                        <a href="#"
+                           class="btn btn-primary" 
+                           data-toggle="tooltip" data-placement="bottom" title="Chương sau">
+                            <span class="btn-icon"> <i class="truyen-icon icon-next-bold"></i> </span>
+                        </a>
+                    </div>
+                    <div class="truyen-read-content" data-font-family="'Palatino Linotype', sans-serif"
+                             style="width:  100%">
+                       
+                        <div class="content" id="js-truyen-content"
+                                 style="font-size: 26px; line-height: 140%; font-family: 'Palatino Linotype', sans-serif; word-wrap: break-word;">
+                            
+                                 Chương 1: Hoàng Sơn Chân Quân cùng Cửu Châu nhất hào quần<br><br> Năm 2019 ngày 20 tháng 5, ngày thứ Hai.<br><br> Xuân tẫn hạ chí.<br><br> Mùa này, Giang Nam khu ngày đêm nhiệt độ chênh lệch vô cùng lớn. Ban ngày còn mặc quần cộc nóng thành chó; ban đêm lại đến núp ở trong chăn đông lạnh thành Hàn hào điểu.<br> <br><br> <br><br> Giang Nam Đại Học Thành.<br><br> Hai giờ mười ba phút chiều, cái giờ này chính là các học sinh giờ đi học. Tống Thư Hàng lại một mình ở tại ký túc xá, bàn máy tính bị kéo đến bên giường, thuận tiện hắn dùng các loại tư thế quan sát phim.<br><br> Tống Thư Hàng cũng không có trốn học yêu thích —— buổi tối hôm qua nửa đêm thời tiết oi bức, trong lúc ngủ mơ hắn sử xuất một chiêu 'Song Long Xuất Hải' đạp bay chăn. Nửa đêm về sáng, nhiệt độ không khí kịch hàng. Toàn thân trên dưới chỉ có một đầu quần cộc Tống Thư Hàng lập tức khổ bức, trong lúc ngủ mơ hai tay của hắn trên giường đau khổ tìm tòi, tìm kiếm thăm dò, lại sờ không tới chăn. Cuối cùng chỉ có co lại thành Bì Bì tôm hình, tại nửa đêm hàn phong dưới dâm uy run lẩy bẩy.<br><br> Mặt trời mới mọc dâng lên lúc, Tống Thư Hàng đã trở thành mùa cảm mạo đại quân một viên.<br><br> Bạn cùng phòng đã thay hắn xin nghỉ hôm nay khóa.<br><br> Sau đó, hắn uống thuốc cảm, ngủ một giấc đến bây giờ.<br><br> Sốt cao rút đi, thân thể vẫn còn có chút suy yếu, dạng này trạng thái căn bản là không có cách đi học. Cho nên, hắn chỉ có thể một thân một mình ở tại ký túc xá nhàm chán xem phim.<br><br> Trên màn hình, phim phát ra thanh tiến độ chậm rãi tiến lên. Nhưng phim nội dung, Tống Thư Hàng lại một chút cũng không thấy đi vào.<br><br> "Dược hiệu còn không có đi qua à, buồn ngủ quá." Hắn ngáp một cái, cảm giác mí mắt có chút nặng nề.<br><br> 'Tích tích tích ~' lúc này, máy tính dưới góc phải phần mềm chat nhảy lên.<br><br> Đây là có người đem hắn thêm làm hảo hữu, hoặc là gia nhập quần tổ nhắc nhở.<br><br> "Ai thêm ta?" Tống Thư Hàng lẩm bẩm nói, hắn đưa tay tại máy tính cảm ứng dưới góc phải nhẹ nhàng điểm một cái, nhắc nhở tin tức bắn ra.<br><br> [ Hoàng Sơn Chân Quân (******) thỉnh cầu tăng thêm ngươi làm hảo hữu. ] kèm theo tin tức: Không.<br><br> Hoàng Sơn Chân Quân? Ai vậy, loại này kỳ quái biệt danh?<br><br> "Là trong lớp đồng học sao?" Tống Thư Hàng thầm nghĩ, trong đầu không khỏi nhớ tới trong lớp mấy cái kia rõ ràng đã lên đại học vẫn còn ở vào thanh xuân huyễn tưởng kỳ gia hỏa. Nếu như là bọn hắn mà nói, hoàn toàn chính xác hội lên loại này kỳ quái biệt danh.<br><br> Nghĩ tới đây, hắn điểm 'Đồng ý' .<br><br> Ngay sau đó, lại có một đầu hệ thống tin tức bắn ra.<br><br> [ Hoàng Sơn Chân Quân mời ngươi gia nhập quần 'Cửu Châu nhất hào quần ', có đồng ý hay không? ]<br><br> Tống Thư Hàng tiếp tục ấn đồng ý.<br><br> 'Thư Sơn Áp Lực Đại' đồng ý gia nhập 'Cửu Châu nhất hào quần' .<br><br> [ ngài đã đồng ý gia nhập quần tổ, cùng nhóm quần hữu chào hỏi đi! ] còn tặng kèm có cái hệ thống khuôn mặt tươi cười.<br><br> Đầu năm nay Chat Messenger làm càng ngày càng nhân tính hóa.<br><br> Liên tiếp nhắc nhở bắn ra phía sau Tống Thư Hàng đàm định tắt đi nhắc nhở cùng quần khung chít chát —— hắn hiện tại buồn ngủ dâng lên, nào có tinh lực quan tâm chính mình tăng thêm cái gì quần?<br><br> Dù sao, hắn quần thiết trí một mực là 'Không gợi ý tin tức chỉ biểu hiện số lượng ', quần bên trong nói chuyện phiếm sẽ không bắn ra quấy rầy đến hắn, sẽ chỉ ở quần tổ sau biểu hiện nói chuyện phiếm số lượng.<br><br> Chờ hắn thanh tỉnh chút phía sau có thể đi lật qua nói chuyện phiếm ghi chép, liền có thể biết mình gia nhập là cái gì quần, còn có quần bên trong thành viên nói chuyện phiếm ghi chép cũng sẽ không mất đi.<br><br> Con mắt càng ngày càng nặng nề. . .<br><br> Phim thanh tiến độ vẫn như cũ ngoan cường tiến lên, Tống Thư Hàng ý thức lại càng thêm mơ hồ.<br><br> **** ******<br><br> Cửu Châu nhất hào quần bên trong, nhìn thấy có tân nhân gia nhập phía sau quần bên trong có lặn xuống nước thành viên ngoi đầu lên.<br><br> Bắc Hà Tán nhân: "Hoàng Sơn Chân Quân tăng thêm vị tân đạo hữu đi vào sao? Đã có hơn một năm không có thêm người mới a?" <br><br> Lại có id vì 'Tô thị A Thất' cấp tốc hồi phục: "Có tân đạo hữu? Đạo hữu là Hoa Hạ cái nào khu? Ở đâu cái động phủ tu hành? Đạo hiệu đâu? Tu vi mấy phẩm?"<br><br> Cái này liên tiếp vấn đề, luôn cảm giác có chỗ nào không thích hợp?<br><br> Gần như đồng thời, id vì Cuồng Đao Tam Lãng bắn ra tin tức: "Tân đạo hữu giới tính? Có phải là tiên tử không? Là thì báo ba vòng, bày ra cái ảnh thôi!"<br><br> Nhìn thấy Tô thị A Thất cùng Cuồng Đao Tam Lãng tin tức, quần bên trong có mấy người khóe miệng co giật.<br><br> "Tam Lãng huynh, ngươi quả nhiên là thuộc cá vàng sao?" Bắc Hà Tán nhân thở dài: "Ngươi cũng đừng lại tác tử, vạn nhất Hoàng Sơn Chân Quân lại tăng thêm vị Đại tiền bối tiến đến làm sao bây giờ?"<br><br> Tam Lãng cái này gia hỏa cái gì cũng tốt, có tình có nghĩa, lấy giúp người làm niềm vui, cho nên nhân duyên không tệ —— chính là bình thường ưa thích miệng ba hoa, tác một tay hảo tử.<br><br> Hết lần này tới lần khác cái này gia hỏa may mắn giá trị lại thấp để cho người ta giận sôi, mỗi lần không cấm ý ở giữa tác tử lúc, đắc tội tổng là Đại tiền bối. Những này nhàn rỗi nhức cả trứng Đại tiền bối đang lo không có việc vui, tự nhiên rất vui vẻ giày vò lên Cuồng Đao Tam Lãng cái này đưa tới cửa việc vui.<br><br> "Quỳ cầu không cần xách 'Đại tiền bối' mấy chữ, bản tọa trong lòng có bóng tối." Cuồng Đao Tam Lãng phát một loạt 'Lệ rơi đầy mặt' biểu lộ.<br><br> Bốn năm trước hắn trương này phá miệng đắc tội một vị xinh đẹp 'Đại tiền bối ', bị giày vò thảm rồi. . . Cái kia Đại tiền bối liên tiếp giày vò hắn ròng rã một năm lẻ bốn tháng. Ngài không nghe lầm, là ròng rã một năm lẻ bốn tháng a! Nhớ tới cái kia đoạn không phải người tranh vanh tuế nguyệt, hốc mắt của hắn đều ẩm ướt.<br><br> Tam Lãng mới lời này vừa mới nói xong, quần bên trong liền liên tiếp bắn ra cười xấu xa biểu lộ —— không che giấu chút nào, ngay thẳng cười trên nỗi đau của người khác.<br><br> Quần bên trong biểu hiện tại tuyến trạng thái có tám người, trong đó có sáu người cùng nhau bắn ra quét một loạt khuôn mặt tươi cười.<br><br> "Các ngươi bọn này cười trên nỗi đau của người khác gia hỏa, bản tọa nhớ kỹ các ngươi mỗi người, đừng cho bản tọa gặp gỡ các ngươi, nếu không nhất định phải làm cho các ngươi nếm thử bản tọa bảy mươi hai đường khoái đao lợi hại!" Cuồng Đao Tam Lãng oán hận nói. Hắn đối với mình khoái đao rất có tự tin, vừa rồi cười xấu xa sáu cái gia hỏa, đơn đấu lời nói không có một cái nào là đối thủ của hắn.<br><br> Cuồng Đao Tam Lãng vừa mới nói xong.<br><br> Quần bên trong lập tức lại đánh lên một cái cười xấu xa biểu lộ, là Tô thị A Thất.<br><br> Tiếp lấy Tô thị A Thất rất hưng phấn nói: "Lúc nào đơn đấu?"<br><br> Hiển nhiên, Tô thị A Thất cũng không có cười trên nỗi đau của người khác ý tứ —— hắn chính là muốn tìm người đánh một trận.<br><br> ". . ." Cuồng Đao Tam Lãng lập tức suy sụp.<br><br> Bởi vì hắn đánh không lại A Thất!<br><br> Hắn tu vi tinh thâm, đã đạt tới Ngũ phẩm Linh Hoàng hậu kỳ cảnh giới, cách Lục phẩm Linh Quân cũng chỉ có hai bước khoảng cách, nhưng là hắn đánh không lại A Thất.<br><br> Hắn một tay bảy mươi hai đường đao pháp vừa nhanh vừa độc, còn có nhanh như thiểm điện thân pháp, nhưng là đánh không lại A Thất.<br><br> Hắn danh xưng Cuồng Đao, cuồng lúc ngay cả mình đều sợ, nhưng chính là đánh không lại A Thất!<br><br> Quần bên trong người nhìn thấy Tam Lãng suy sụp phía sau lại là một chuỗi không chút kiêng kỵ khuôn mặt tươi cười.<br><br> ". . ." Lần này, Cuồng Đao Tam Lãng chỉ có thể buồn bực phát một chuỗi dấu hai chấm.<br><br> Quần bên trong người nháo đằng nửa ngày, lại không nhìn thấy tân nhân lên tiếng, hơi nghi hoặc một chút.<br><br> "Tân đạo hữu không ra?" Bắc Hà Tán nhân lên tiếng hỏi.<br><br> Đáng tiếc, bởi vì thuốc cảm mạo dược hiệu, Tống Thư Hàng đã lần nữa tiến vào nửa ngủ trạng thái.<br><br> Lúc này, Tô thị A Thất lại rất vui vẻ phát cái tin: "Ta xem dưới, tân đạo hữu gọi 'Thư Sơn Áp Lực Đại' . Có nghe qua gọi cái này đạo hiệu cao thủ sao? Cái này đạo hiệu nghe có chút giống như là Nho môn hành giả? Thật làm cho người chờ mong a! Những năm này, Nho môn hành giả ẩn cư vô cùng sâu, tìm cũng không tìm tới. Ta đã có gần trăm năm không có đánh qua bọn hắn! Hồi tưởng lại, Nho môn hành giả so Phật môn còn muốn đánh thoải mái, không chỉ có mồm mép lợi hại, nắm đấm cũng đủ cứng. Mà lại đánh tới hào hứng lúc sẽ còn phóng khoáng ngâm Thi trợ hứng, lần thoải mái! Thích nhất đánh bọn hắn."<br><br> "A Thất, ta nói, ngươi đối tân đạo hữu chờ mong vĩnh viễn chỉ có có được hay không đánh, cùng đánh sướng hay không? Sao?" Cuồng Đao Tam Lãng phát cái lệ rơi đầy mặt biểu lộ nói. Đây quả thực là ác bá hành vi có được hay không? !<br><br> "Ây." Tô thị A Thất có chút xấu hổ.<br><br> Bắc Hà Tán nhân cười xấu xa nói: "Có thể hay không lại là cái sẽ không dùng Chat Messenger 'Đại tiền bối' ?"<br><br> Hắn vừa nói như thế, tất cả mọi người cảm giác tràng diện này rất có tức thị cảm đâu?<br><br> Đúng a, không sai biệt lắm bốn năm trước tựa hồ cũng có một vị bế quan mấy trăm năm sau xuất quan tiền bối , đồng dạng thật vất vả lên phần mềm chat, bị Hoàng Sơn Chân Quân gia nhập quần. Nhưng bởi vì sẽ không đánh chữ, không có phát biểu.<br><br> Sau đó, một vị gọi Cuồng Đao Tam Lãng gia hỏa rất vui vẻ tại vị này tiền bối trước mặt miệng ba hoa, lại phải vị tiền bối này báo ba vòng, lại phải nàng phát ảnh chụp, lại phải giọng nói nói chuyện phiếm cái gì. <br><br> Sau đó. . . Không có qua mấy ngày, Cuồng Đao Tam Lãng liền tận mắt thấy vị tiền bối này. Đó là vị rất đẹp tiền bối, như là trong bầu trời đêm minh nguyệt đồng dạng loá mắt mỹ lệ.<br><br> Lại nói tiếp, vị này mỹ lệ tiền bối giày vò Cuồng Đao Tam Lãng ròng rã một năm lẻ bốn tháng, mới hài lòng rời đi.<br><br> Cuồng Đao Tam Lãng lập tức quỳ.<br><br> "Hoàng Sơn?" Lúc này, một cái gọi 'Dược Sư' id phát biểu.<br><br> Không hiểu thấu ngắn gọn tin tức, không đầu không đuôi.<br><br> Cũng may quần bên trong người sớm quen thuộc Dược Sư ngắn gọn nói chuyện phiếm thói quen —— hắn là đang hỏi quần chủ Hoàng Sơn Chân Quân người ở đâu?<br><br> Phát biểu ngắn gọn cũng không phải là Dược Sư tính cách cao quý lãnh ngạo, mà bởi vì hắn đánh chữ dùng chính là hai chỉ thiền cộng viết tay, tốc độ tặc chậm. Số lượng từ nhiều thời điểm còn dễ dàng sai, xóa xóa viết viết vô cùng thống khổ. Cho nên Dược Sư thói quen phát biểu có thể ngắn thì ngắn. Dần dà, liền biến thành bây giờ loại này tích chữ như vàng giao lưu phương thức.<br><br> "Hắn tăng thêm người sau liền lập tức logout, nghe nói hắn nhà cái kia bảo bối Đại yêu khuyển lại bị tức giận rời nhà đi ra ngoài, Hoàng Sơn Chân Quân lại đuổi theo. Ứng phó cái kia bảo bối Đại yêu khuyển cũng không dễ dàng, hiện tại Chân Quân khẳng định rất bận rộn, có thể lên tuyến cộng người đều là khó được dành thời gian." Bắc Hà Tán nhân trả lời.<br><br> ". . ." Dược Sư.<br><br> "Vậy chỉ có thể chờ tân đạo hữu học được dùng Chat Messenger sau lại hàn huyên." Tô thị A Thất cảm thán nói. Bọn hắn đều vào trước là chủ, cho rằng mới gia nhập cũng là người trong đồng đạo.<br><br> Gặp tân đạo hữu không có phản ứng, tại tuyến mấy vị gặp không có việc vui, cũng đều nhao nhao lặn xuống nước.<br><br> **** ******<br><br> Ước chừng sau một tiếng, Tống Thư Hàng thoáng tỉnh táo lại.<br><br> "Nhớ kỹ vừa rồi có người cộng ta quần đi, giống như gọi Cửu Châu nhất hào quần đến?" Hắn thấp giọng thì thào, tiện tay ấn mở dưới góc phải Chat Messenger, lôi ra Cửu Châu nhất hào quần khung chít chát.<br><br> Đến cùng là cái gì quần?<br><br> Rất nhanh, một giờ trước nói chuyện phiếm ghi chép xuất hiện ở trước mặt hắn.<br><br> Tống Thư Hàng đại khái du lãm một lần.<br><br> Đạo hữu? Động phủ? Tu vi mấy phẩm?<br><br> Còn có tiền bối? Chân Quân? Bản tọa? Đuổi bắt Đại yêu khuyển?<br><br> Các loại tiên hiệp trong tiểu thuyết chuyên dụng từ ngữ.<br><br> Quần bên trong nhân viên nói chuyện phiếm phương thức nói chuyện cũng rất thú vị —— nửa cổ không cổ, nửa Bạch không Bạch. Cho người cảm giác chính là người hiện đại ý đồ dùng cổ ngữ giao lưu, hết lần này tới lần khác lại bởi vì cổ văn bản lĩnh thất bại, dẫn đến giao lưu phương thức rất khó chịu.<br><br> "Xoẹt ~~" Tống Thư Hàng cười ra tiếng.<br><br> Xem ra đó là cái tiên hiệp kẻ yêu thích xây quần?<br><br> A không, đây tuyệt đối không phải phổ thông tiên hiệp kẻ yêu thích quần!<br><br> Quần bên trong mỗi người đều cho mình lên cái đạo hiệu, chỗ ở muốn xưng động phủ, quần chủ lạc đường chó cảnh đều muốn hình dung thành gia bên trong Đại yêu khuyển rời nhà trốn đi. Còn có người tự xưng trên trăm năm không có đánh qua Nho môn hành giả cái gì, nói cách khác người kia tự xưng đã sống hơn mấy trăm tuổi?<br><br> Chỉ là nhìn lấy những này nói chuyện phiếm ghi chép thì có loại thật xấu hổ cảm giác.<br><br> "Loại này si mê trình độ, đã đạt đến chuunibyou trình độ đi, mà lại là rất có Hoa Hạ đặc sắc tiên hiệp tự kỷ." Tống Thư Hàng âm thầm gật đầu.<br><br> Xem ra, đó là cái tiên hiệp chuunibyou người bệnh trại tập trung!<br><br> Đây cũng là hắn đối 'Cửu Châu nhất hào quần' cùng quần bên trong thành viên ấn tượng đầu tiên.<br><br> Bất quá vì sao lại cộng hắn nhập quần?<br><br> Hắn nhìn xuống quần chủ Hoàng Sơn Chân Quân tư liệu, cũng không phải là bạn học của mình, bản thân cũng khẳng định không biết hắn.<br><br> Là lầm thêm sao? <br><br> <br>
+                        </div>
+                        
+                    </div>
+                    <div class="truyen-read-navigation text-center">
+                        <a href="#"
+                           class="btn btn-primary" 
+                           data-toggle="tooltip" data-placement="bottom" title="Chương trước">
+                            <span class="btn-icon"> <i class="truyen-icon icon-prev-bold"></i> </span>
+                        </a>
+                        <a href="#" class="btn btn-transparent btn-outline-primary waves-effect">
+                            <span class="btn-icon js-tooltip" data-toggle="tooltip" data-placement="bottom"
+                                  title="Mục Lục"> <i class="truyen-icon icon-list"></i> </span> </a>
+                        <a href="#modal-report" data-toggle="modal" class="btn btn-transparent btn-outline-primary waves-effect">
+                            <span class="btn-icon js-tooltip" data-toggle="tooltip" data-placement="bottom"
+                                  title="Báo lỗi"> <i class="truyen-icon icon-warning"></i> </span> </a>
+                        <a href="#"
+                           class="btn btn-primary" 
+                           data-toggle="tooltip" data-placement="bottom" title="Chương sau">
+                            <span class="btn-icon"> <i class="truyen-icon icon-next-bold"></i> </span>
+                        </a>
+                    </div>
+                    <div class="chapter-comment">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="comment_field">
+                                    <div class="cm-based">
+                                        <p class="comment-count"><span id="count_comment">{{totalComment}}</span> bình luận
+                                        </p>
+                                        <form name="frmContact" id="frmContact" method="post" ng-submit="addComment()" novalidate>
+                                            <div class="form row">
+                                                <div class="form-group col-md-10 comment-text">
+                                                        <textarea ng-model="commentText" class="form-control">
+                                                        </textarea>
+                                                </div>
+                                                <div class="form-group col-md-2">
+                                                    <button type="submit" ng-click="" class="btn btn-truyen btn-lg btn-block " name="btnComment"
+                                                            id="btnComment">
+                                                        <span class="fas fa-check" aria-hidden="true"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </form>
+                                        <div id="truyen-detail-comment" class="blog-comment">
+                                            <div class="alert alert-primary" role="alert" ng-show="listComment.length === 0">
+                                                <h5 class="text-center">Chưa có Bình Luận nào</h5>
+                                            </div>
+                                            <ul class="comments" id="comment_list" ng-show="listComment.length !== 0">
+                                                <li class="clearfix" ng-repeat="comment in listComment" id="comment_{{comment.comID}}">
+                                                    <div style="float:left;width:40px;height:80px;">
+                                                        <a ng-href="/member/{{comment.user.id}}">
+                                                            <img class="avatar"
+                                                                 alt="{{comment.user.displayName}}"
+                                                                 ng-src="{{comment.user.avatar? comment.user.avatar : noImage}}">
+                                                        </a><br style="clear:both">
+                                                    </div>
+                                                    <div class="post-comments">
+                                                        <p ng-bind-html="comment.content"></p>
+                                                        <p class="meta-2">
+                                                            <a ng-href="/member/{{comment.user.id}}"><abbr title="Thành viên">{{comment.user.displayName}}</abbr></a>
+                                                            <small>
+                                                                <small><a>Báo xấu</a></small>
+                                                            </small>
+                                                            <small class="float-right">{{comment.timeUpdate}}
+                                                            </small>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div ng-show="totalCommentPages>1">
+                                                <ul class="pagination justify-content-end mb-3 mt-3">
+                                                    <li ng-show="currentCommentPage != 1" class="page-item">
+                                                        <a class="page-link" ng-click="getListComment(currentCommentPage - 1, 1)">
+                                                            <i class="fas fa-step-backward fa-sm"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li ng-repeat="i in pageComment" ng-class="i===currentCommentPage?'page-item active': 'page-item'">
+                                                        <a ng-class="i===currentCommentPage?'page-link disabled': 'page-link'"
+                                                           ng-click="getListComment(i,1)">{{i}}</a>
+                                                    </li>
+                                                    <li ng-show="currentCommentPage != totalCommentPages" class="page-item">
+                                                        <a class="page-link" ng-click="getListComment(currentCommentPage + 1, 1)">
+                                                            <i class="fas fa-step-forward fa-sm"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" ng-click="getListComment(1, 0)">
+                                                            Xem hết
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--Footer-->
+<div replace="/fragments/footer"></div>
+</body>
+
+<!-- Modal đăng ký rút tiền-->
+<div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-notify modal-primary" role="document">
+        <!-- Content -->
+        <div class="modal-content">
+            <!-- Header -->
+            <div class="modal-header">
+                <p class="heading lead">Báo Lỗi</p>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">×</span>
+                </button>
+            </div>
+            <form ng-submit="submitReport()">
+                <!-- Body -->
+                <div class="modal-body">
+                    <!-- Material input -->
+                    <div class="md-form">
+                        <textarea type="text" id="infomation" name="infomation" rows="6" class="form-control md-textarea" ng-model="reportMss"
+                                  placeholder="Nội dung báo lỗi không được để trống"></textarea>
+                        <label for="infomation" class="text-primary">Nội dung báo lỗi</label>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer justify-content-center">
+                    <input type="submit" class="btn btn-primary waves-effect waves-light" value="Báo Lỗi" id="submitWD">
+                </div>
+            </form>
+        </div>
+        <!-- Content -->
+    </div>
+</div>
+</html>

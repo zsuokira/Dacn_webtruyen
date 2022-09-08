@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<head>
+        <!--Header-->
+        <title >A</title>
+   
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        
+        <link rel="icon" href="../../static/images/favicon.ico">
+        
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <!-- Required meta tags -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Font Awesome CSS -->                  
+        <link rel="stylesheet" type="text/css" href="../../static/bower/Font-Awesome/css/all.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="../../static/mdbootstrap/css/bootstrap.min.css"/>
+        <!-- Material Design Bootstrap -->
+        <link href="../../static/mdbootstrap/css/mdb.min.css" rel="stylesheet">
+        <!--  Swiper CSS -->
+        <link rel="stylesheet" type="text/css" href="../../static/bower/swiper/dist/css/swiper.min.css"/>
+        <!--  Custom CSS -->
+        <link href="../../static/css/myWebStyle.css" rel="stylesheet" type="text/css"/>
+        <!--  Animation CSS -->
+        <link href="../../static/css/animationStyle.css" rel="stylesheet" type="text/css"/>
+        <!-- Jquery 3.2.1 -->
+        <script href="../../static/bower/jquery/dist/jquery.js"></script>
+        <!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+        <script href="../../static/bower/sweetalert2/dist/sweetalert2.all.min.js"></script>
+        <!--  Animate JavaScript -->
+        <link rel="stylesheet" type="text/css" href="../../static/bower/animate.css/animate.min.css">
+        <!--  Swiper JavaScript -->
+        <script type="text/javascript" href="../../static/bower/swiper/dist/js/swiper.min.js"></script>
+        <!-- JQueyUI CSS for Auto Complete -->
+        <link rel="stylesheet" type="text/css" href="../../static/bower/jquery-ui/themes/base/jquery-ui.css">
+        <!--jQuery Validation JavaScript-->
+        <script type="text/javascript" href="../../static/bower/jquery-validation/dist/jquery.validate.js"></script>
+        <!-- JQuery Lazy Load -->
+        <script type="text/javascript" href="../../static/bower/jquery-lazy/jquery.lazy.min.js"></script>
+        <script type="text/javascript" href="../../static/bower/jquery-lazy/jquery.lazy.plugins.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script href="../../static/mdbootstrap/js/popper.min.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Bootstrap JS -->
+        <script href="../../static/mdbootstrap/js/bootstrap.min.js"></script>
+        <!--jQuert UI-->
+        <script type="text/javascript" href="../../static/bower/jquery-ui/jquery-ui.js"></script>
+        <!-- Encrypt Aes -->
+        <script type="text/javascript" href="../../static/js/aes.js"></script>
+        <script type="text/javascript" href="../../static/js/pbkdf2.js"></script>
+        <script type="text/javascript" href="../../static/js/AesUtil.js"></script>
+        <!-- My Function JavaScript -->
+        <script type="text/javascript" href="../../static/js/myFunction.js"></script>
+        <!-- My JavaScript -->
+        <script type="text/javascript" href="../../static/js/myApp.js"></script>
+        <!-- My JavaScript -->
+        <script type="text/javascript" href="../../static/js/backToTop.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" href="../../static/mdbootstrap/js/mdb.min.js" defer></script>
+        <script>
+            // Tooltips Initialization
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+        
+        </script>
+            <!--Angular JS-->
+            <script href="../../static/bower/angular/angular.min.js"></script>
+            <!--Angular Sanitize JS-->
+            <script href="../../static/bower/angular-sanitize/angular-sanitize.min.js"></script>
+            <!--My AngularJS Controller-->
+            <script href="../../static/js/controller/homeController.js"></script>
+            <!--Home AngularJS Service-->
+            <script href="../../static/js/service/WebService.js"></script>
+    <!--Angular JS-->
+    <script src="../../static/bower/angular/angular.min.js"></script>
+    <!--Angular Sanitize JS-->
+    <script src="../../static/bower/angular-sanitize/angular-sanitize.min.js"></script>
+    <!--My AngularJS Controller-->
+    <script src="../../static/js/controller/homeStoryController.js"></script>
+    <!--Home AngularJS Service-->
+    <script src="../../static/js/service/WebService.js"></script>
+    <!--Rating-->
+    <script src="../../static/js/jRating.js"></script>
+</head>
+<body class="body-home" >
+<div class="page-wrapper">
+    <!--NavBar-->
+    <header class="truyen-header">
+        <nav class="navbar navbar-truyen">
+         <div class="container">
+                        <div class="navbar-header">
+                                <a href="#" class="navbar-logo hidden-sm hidden-xs"> <img
+                                        class="img-fluid" src="#" alt="">
+                                </a>
+                                <a href="#" class="navbar-logo hidden-sm hidden-xs"> 
+                                    <!-- <img class="img-fluid" src="../../static/images/logo.png" alt=""> -->
+                                </a>
+                            <a href="#" class="navbar-search-btn js-open-search-box-mobile d-md-block d-lg-none">
+                                <i class="truyen-icon icon-search"></i>
+                            </a>
+                            <div class="navbar-category">
+                                <button class="navbar-category-btn js-open-sidebar">
+                                                <span class="lines">
+                                                    <span class="line"></span>
+                                                    <span class="line"></span>
+                                                    <span class="line"></span>
+                                                </span>
+                                    <span class="hidden-xs hidden-sm">Danh Mục</span>
+                                </button>
+                                <ul class="navbar-category-list">
+                                    <li class="col-4 float-left">
+                                        <a href="#" title="Truyện Hoàn Thành">Truyện Hoàn Thành</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#" title="Truyện Mới">Truyện Mới</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#" title="Truyện Vip">Truyện Vip</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="navbar-category">
+                                <button class="navbar-category-btn js-open-sidebar">
+                                        <span class="lines">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                        </span>
+                                    <span class="hidden-xs hidden-sm">Thể loại</span>
+                                </button>
+                                <ul class="navbar-category-list">
+                                    <li class="col-4 float-left">
+                                        <a href="#">Tiên Hiệp</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#">Đô Thị</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#">Đời Thường</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#">Huyền Huyễn</a>
+                                    </li>
+                                    <li class="col-4 float-left">
+                                        <a href="#">Võng Du</a>
+                                    </li>
+        
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="custom navbar-custom">
+                            <ul class="nav navbar-nav navbar-right" style="flex-direction: row;">
+                                <li>
+                                    <div class="search-block">
+                                        <div class="actions">
+                                            <button type="submit" title="Tìm kiếm"
+                                                    class="search-toggle-btn" id="js-search-toggle">
+                                                <i class="truyen-icon icon-search"></i>
+                                            </button>
+                                        </div>
+                                        <form id="js-search-panel" class="search-panel" action="#" method="POST">
+                                            <div class="txtDiv">
+                                                <input type="text" name="txtKeyword" id="txtKeyword" value=""
+                                                       placeholder="Tên truyện" class="form-control"
+                                                       autocomplete="off" required
+                                                       oninvalid="this.setCustomValidity('Bạn chưa nhập gì để tìm kiếm!')">
+                                                <button class="btn btn-search mt-0" type="submit">
+                                                    <i class="truyen-icon icon-search-primary"></i>
+                                                </button>
+                                                <ul id="ulNoMatch"
+                                                    class="ui-autocomplete ui-menu ui-widget1 ui-widget1-content ui-corner-all"
+                                                    role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 16;display: none; wid  150px;">
+                                                    <li class="ui-menu-item" role="menuitem">
+                                                        <a class="ui-corner-all" tabindex="-1">Không Có Truyện Phù Hợp </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li >
+                                    <div class="user-block h-100">
+                                        <i class="truyen-icon icon-user"></i>
+                                        <a href="#"> Đăng nhập </a>
+                                        <a class="diver disabled">|</a>
+                                        <a href="#"> Đăng ký </a>
+                                    </div>
+                                </li>
+                                <li class="dropdown" >
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                       aria-haspopup="true" aria-expanded="false">
+                                        <i class="truyen-icon icon-user"></i>
+                                        <span class="truyen-login-title" ></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li ><a href="#">Trang Quản Lý</a></li>
+                                        <li><a href="#">Hồ Sơ</a></li>
+                                        <li><a href="#">Truyện Theo Dõi</a></li>
+                                        <li><a href="#">Quản Lý Truyện</a></li>
+                                        <li><a href="#">Nạp Đậu</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li><a href="#">Thoát</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+        </header>
+            <aside class="truyen-sidebar">
+                <a href="#" class="sidebar-close js-close-sidebar"></a>
+                <div class="sidebar-container">
+                    <div class="sidebar-header" >
+                        <div class="user-icon">
+                            <i class="truyen-icon icon-user"></i>
+                        </div>
+                        <div class="card-menu">
+                            <div class="list-group" style="margin-bottom: 20px;">
+                                <div class="list-group-item list-group-item-sidebar">
+                                    <a class="truyen-sidebar-user-title" role="button"
+                                       data-toggle="collapse" href="#truyen-user-login-custom"
+                                       aria-expanded="false"
+                                       aria-controls="truyen-user-login-custom">Đăng nhập /
+                                        Đăng ký <span class="truyen-icon icon-white-next"></span>
+                                    </a>
+                                </div>
+                                <div class="list-group collapse"
+                                         id="truyen-user-login-custom">
+                                    <div
+                                            class="list-group-item list-group-item-sidebar list-group-item-diver"></div>
+                                    <div class="list-group-item list-group-item-sidebar">
+                                        <a href="@{/danhap}" class="login-btn">Đăng nhập</a>
+                                    </div>
+                                    <div class="list-group-item list-group-item-sidebar">
+                                        <a href="@{/daky}" class="login-btn">Đăng ký</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-header" sec:authorize="isAuthenticated()">
+                        <div class="user-icon">
+                            <i class="truyen-icon icon-user"></i>
+                        </div>
+            
+                        <a if="${#request.userPrincipal != null}" href="@{/logout}" class="user-logout">Thoát</a>
+                        <div class="card-menu">
+                            <div class="list-group" style="margin-bottom: 20px;">
+                                <div class="list-group-item list-group-item-sidebar">
+                                    <a class="truyen-sidebar-user-title collapsed"
+                                       role="button" data-toggle="collapse"
+                                       href="#truyen-user-menu-collapse" aria-expanded="false"
+                                       aria-controls="truyen-user-menu-collapse" sec:authentication="name"> <span
+                                            class="truyen-icon icon-white-next"></span>
+                                    </a>
+                                </div>
+                                <div class="list-group collapse"
+                                         id="truyen-user-menu-collapse">
+                                    <div class="list-group-item list-group-item-sidebar list-group-item-diver"></div>
+                                    <div class="list-group-item list-group-item-sidebar">
+                                        <a href="/tai-khoan/datruyen/">Đăng truyện<span
+                                                class="truyen-icon icon-white-next"></span>
+                                        </a>
+                                    </div>
+                                    <div class="list-group-item list-group-item-sidebar">
+                                        <a href="/tai-khoan/theo_doi/">Truyện Theo Dõi<span
+                                                class="truyen-icon icon-white-next"></span>
+                                        </a>
+                                    </div>
+                                    <div class="list-group-item list-group-item-sidebar">
+                                        <a href="/account/list_story/">Quản lý truyện<span
+                                                class="truyen-icon icon-white-next"></span></a>
+                                    </div>
+                                    <div
+                                            class="list-group-item list-group-item-sidebar list-group-item-diver"></div>
+                                    <div class="list-group-item list-group-item-sidebar">
+                                        <a href="/tai-khoan/tu-truyen/">Tủ truyện<span
+                                                class="truyen-icon icon-white-next"></span></a>
+                                    </div>
+                                    <div
+                                            class="list-group-item list-group-item-sidebar list-group-item-diver"></div>
+                                    <div class="list-group-item list-group-item-sidebar">
+                                        <a href="/tai-khoan/">Hồ sơ <span
+                                                class="truyen-icon icon-white-next"></span></a>
+                                    </div>
+                                    <div
+                                            class="list-group-item list-group-item-sidebar list-group-item-diver"></div>
+                                    <div class="list-group-item list-group-item-sidebar">
+                                        <a href="/tai-khoan/nap-dau">Nạp Đậu<span
+                                                class="truyen-icon icon-white-next"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-menu">
+                        <div class="list-group" style="margin-bottom: 20px;">
+                            <div class="list-group-item list-group-item-action list-group-item-sidebar">
+                                <a href="@{/}"><i class="fas fa-home"></i>Trang chủ
+                                    <span class="truyen-icon icon-next"></span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="list-group" style="margin-bottom: 20px;">
+                            <div class="list-group-item list-group-item-action list-group-item-sidebar">
+                                <a href="@{/danh-muc/moi-cap-nhat}" target="_blank"
+                                   title="Truyện Mới"> Truyện Mới <span
+                                        class="truyen-icon icon-next"></span>
+                                </a>
+                            </div>
+                            <div class="list-group-item list-group-item-action list-group-item-sidebar">
+                                <a href="@{/danh-muc/truyen-hoan-thanh}" target="_blank"
+                                   title="Truyện Hoàn Thành"> Truyện Hoàn Thành <span
+                                        class="truyen-icon icon-next"></span>
+                                </a>
+                            </div>
+                            <div class="list-group-item list-group-item-action list-group-item-sidebar">
+                                <a href="@{/danh-muc/truyen-vip}" target="_blank"
+                                   title="Truyện Vip"> Truyện Vip <span
+                                        class="truyen-icon icon-next"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-group" style="margin-bottom: 20px;">
+                        <div class="list-group-item list-group-item-action list-group-item-sidebar"
+                                 if="${categorylist != null && not #lists.isEmpty(categorylist)}"
+                                 each="category,iterStat : ${categorylist}">
+                            <a href="@{'/the-loai/'+${category.id}+'/'+${category.metatitle}}"
+                               title="'Truyện'+${category.name}"
+                            ><span text="${iterStat.index+1}+' - '+${category.name}"></span> <span
+                                    class="truyen-icon icon-next"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <a href="#" class="truyen-sidebar-overlay js-close-sidebar"></a>
+            <div class="truyen-search-box">
+                <div class="container">
+                    <form class="search-box-mobile" method="post" action="@{/search}">
+                        <input type="text" id="txtKeywordMobi" name="txtKeyword"
+                               class="form-control" placeholder="Tên truyện hoặc tác giả không dấu" value=""
+                               autocomplete="off" required oninvalid="this.setCustomValidity('Bạn chưa nhập gì để tìm kiếm!')">
+                        <button type="submit" class="search-box-mobile-btn"
+                                id="js-search-box-mobile-btn">
+                            <i class="truyen-icon icon-search-primary"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <a href="#" class="truyen-search-box-overlay js-close-search-box"></a>
+
+    <div class="truyen-main">
+        <div class="container">
+            <div class="truyen-detail-block">
+                <div class="truyen-div div-featured">
+                    <div class="featured-content truyen-breadcrumb p-0">
+                        <ol class="breadcrumb" style="background-color: inherit">
+                            <li class="breadcrumb-item">
+                                <a property="item" typeof="WebPage" href="#">
+                                    <span property="name">Trang chủ</span>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Kẻ Theo Đuổi Ánh Sáng
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="truyen-div div-featured div-detail-info">
+                    <div class="truyen-detail-info-block">
+                        <div class="row">
+                            <div class="col-thumb col-3">
+                                <div class="thumb hidden-xs">
+                                    <img class="img-fluid lazyload" src="../../static/images/300.png">
+                                </div>
+                            </div>
+                            <div class="col-info col-6">
+                                <div class="info">
+                                    <h1 class="title">
+                                        <a href="" >Kẻ Theo Đuổi Ánh Sáng</a>
+                                    </h1>
+                                    <div class="list">
+                                        <div class="item">
+                                            <div class="item-label"> Tác giả:</div>
+                                            <div class="item-value"><span
+                                                    class="author" >Meo Meo Đại Lão</span></div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="item-label"> Thể loại:</div>
+                                            <div class="item-value">
+                                                <ul class="list-unstyled categories">
+                                                    <li >
+                                                        <a href="#">Đô Thị</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="item-label"> Tình trạng:</div>
+                                            <div class="item-value">
+                                                    <span class="story-go text-center" >
+                                                        Đang ra
+                                                    </span>
+                                                <!-- <span class="story-go text-center" >
+                                                        Tạm dừng
+                                                    </span>
+                                                <span class="story-com text-center" >
+                                                        Hoàn Thành
+                                                    </span> -->
+                                            </div>
+                                        </div>
+                                        <div class="item d-block d-sm-none" >
+                                            <div class="item-label"> Đã đọc:</div>
+                                            <div class="item-value">
+                                                <a href="#">Chương 1: 2 Con Mèo đánh nhau
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="item d-block d-sm-none">
+                                            <div class="item-label"> Mới nhất:</div>
+                                            <div class="item-value" >
+                                                <a href="#">
+                                                    <span class="text-info">Chương 1: 2 Con Mèo đánh nhau</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buttons">
+                                        <a  class="btn btn-truyen"
+                                           href="#">
+                                            Đọc tiếp
+                                        </a>
+                                        <a 
+                                           class="btn btn-truyen"
+                                           href="#">
+                                            Đọc Từ Đầu
+                                        </a>
+                                        <a class="btn btn-outline-primary waves-effect">Theo dõi</a>
+                                        <!-- <a class="btn btn-outline-primary waves-effect">Bỏ Theo dõi</a> -->
+                                        <!-- Button trigger modal -->
+                                        <a class="btn btn-xs btn-read text-white" data-toggle="modal" >
+                                            Đề Cử
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="truyen-div">
+                    
+                    <div class="truyen-detail-tab classic-tabs" id="navbar-custom">
+                        <div class="tabs-wrapper">
+                            <!-- Nav tabs -->
+                            
+                            <ul class="nav tabs-blue" >
+                                <li class="nav-item ">
+                                    <a class="nav-link active waves-light active waves-effect waves-light" data-toggle="tab" href="a">
+                                        Giới Thiệu 
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link  waves-light  waves-effect waves-light" data-toggle="tab" href="b" >
+                                        Danh Sách Chương
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="c" >
+                                        Bình Luận
+                                    </a>
+                                </li>
+                            </ul>
+                            </div>
+                            <!-- Tab panes {Fade}  -->
+                            <div class="tab-content">
+                               
+                                <div class="tab-pane fade show active " id="truyen-chapter" name="truyen-chapter" role="tabpanel">
+                                    <div class="truyen-detail-chap">
+                                        <div class="row" ng-show="listChapter.length === 0">
+                                            <div class="col-12">
+                                                <div class="alert alert-primary" role="alert">
+                                                    <h5 class="text-center">Chưa có Chương nào được đăng </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel" ng-show="listChapter.length !== 0">
+                                            <div class="panel-body">
+                                                <div class="list-chap">
+                                                    <div class="row">
+                                                        <div class="col-sm-6 col-md-4 chapter-item" ng-repeat="item in listChapter">
+                                                            <div class="item">
+                                                                <a ng-href="/truyen/{{item.storyId}}/chuong-{{item.id}}" class="align-items-center d-flex"
+                                                                   ng-attr-title="Đăng bởi {{item.displayName}} lúc {{item.createDate| date: 'HH:mm dd-MM-yyyy' }}">
+                                                                        <span class="chapter-name">
+                                                                            <img ng-show="item.status === 2" src="/images/vip-vip.gif" class="img-fluid"
+                                                                                 height="12px"> Chương {{item.chapterNumber}} : {{item.name}}</span>&nbsp;
+                                                                    <span class="chapter-time text-muted">{{item.timeUpdate}}</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div ng-show="totalPages>1">
+                                                <ul class="pagination justify-content-end mb-3 mt-3">
+                                                    <li ng-show="currentPage != 1" class="page-item">
+                                                        <a class="page-link" ng-click="getListChapter(currentPage - 1, 1)">
+                                                            <i class="fas fa-step-backward fa-sm"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li ng-repeat="i in page" ng-class="i===currentPage?'page-item active': 'page-item'">
+                                                        <a ng-class="i===currentPage?'page-link disabled': 'page-link'" ng-click="getListChapter(i,1)">{{i}}</a>
+                                                    </li>
+                                                    <li ng-show="currentPage != totalPages" class="page-item">
+                                                        <a class="page-link" ng-click="getListChapter(currentPage + 1, 1)">
+                                                            <i class="fas fa-step-forward fa-sm"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" ng-click="getListChapter(1, 0)">
+                                                            Xem hết
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-sm" >
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="appointModalLabel">Đề Cử Truyện</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>- Truyện đã được đề cử: <strong text="${story.countAppoint}"></strong> nguyệt phiếu</p>
+                    <p>- Nếu bạn thấy truyện này hay bạn có thể sử dụng Đậu để đề cử truyện này, truyện càng có
+                        nhiều phiếu đề cử càng có vị trí đẹp ngoài trang chủ, càng có nhiều người đọc truyện hơn.</p>
+                    <p>- Mỗi Phiếu đề cử tốn 1000 đậu</p>
+                    <form class="form-inline" ng-submit="appoint()">
+                        <div class="form-group">
+                            <input type="number" class="form-control"
+                                   placeholder="Nhập số phiếu đề cử" min="1" ng-model="coupon"></div>
+                        <button type="submit" class="btn btn-truyen">Đề cử</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--Footer-->
+<footer class="truyen-footer">
+    <div id="footer">
+        <div class="container footer-con">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-12 col-sm-12 col-md-4">
+                    <h5>Giới thiêu</h5>
+                    <hr class="bg-truyen mb-2 mt-0 d-inline-block mx-auto w-50">
+                    <p text="${information.introduce}">
+
+                    </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4">
+                    <h5>Hỗ trợ</h5>
+                    <hr class="bg-truyen mb-2 mt-0 d-inline-block mx-auto w-50">
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="#" target="_blank"><span class="block-list-icon">
+                                <i class="truyen-icon icon-mobile mr-3"></i></span> Ứng dụng Truyện Online</a></li>
+                        <li><a href="#"><span class="block-list-icon"><i
+                                class="truyen-icon icon-warning mr-3"></i></span>Báo lỗi ứng dụng</a></li>
+                        <li><a href="#"><span class="block-list-icon"><i
+                                class="truyen-icon icon-faq mr-3"></i></span> FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4">
+                    <h5>Liên hệ</h5>
+                    <hr class="bg-truyen mb-2 mt-0 d-inline-block mx-auto w-50">
+                    <ul class="list-unstyled quick-links">
+                        <li>
+                            <a href="#">
+                                <span class="block-list-icon">
+                                    <i class="truyen-icon icon-email mr-3"></i>
+                                </span> Email: <span>motconvit@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="block-list-icon">
+                                    <i class="truyen-icon icon-mobile mr-3"></i>
+                                </span>
+                                Phone: <span>09999999999</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    $(document).ready(function () {
+        $(".basic").jRating({
+            decimalLeng 0,
+            ratingPa window.location.origin + '/api/story/rating',
+            bigStarsPa window.location.origin + '/images/stars.png',
+            rateMax: 10,
+            onSuccess: function (element, rate, data) {
+                if (data.message) {
+                    $(".basic").removeClass("jDisabled");
+                    swal({
+                        text: data.message,
+                        type: 'warning',
+                        confirmButtonText: 'Ok'
+                    });
+                } else {
+                    $(".basic").unbind();
+                    $('#myrating').html(data.myrating);
+                    $('#myrate').html(data.myrate);
+                }
+            },
+            onError: function () {
+                alert('Error : please retry');
+            }
+        });
+    });
+
+   
+</script>
+</body>
+</html>

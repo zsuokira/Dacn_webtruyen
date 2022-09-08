@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!--Header-->
+    <title >A</title>
+   
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<link rel="icon" href="../../static/images/favicon.ico">
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<!-- Required meta tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Font Awesome CSS -->                  
+<link rel="stylesheet" type="text/css" href="../../static/bower/Font-Awesome/css/all.css">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="../../static/mdbootstrap/css/bootstrap.min.css"/>
+<!-- Material Design Bootstrap -->
+<link href="../../static/mdbootstrap/css/mdb.min.css" rel="stylesheet">
+<!--  Swiper CSS -->
+<link rel="stylesheet" type="text/css" href="../../static/bower/swiper/dist/css/swiper.min.css"/>
+<!--  Custom CSS -->
+<link href="../../static/css/myWebStyle.css" rel="stylesheet" type="text/css"/>
+<!--  Animation CSS -->
+<link href="../../static/css/animationStyle.css" rel="stylesheet" type="text/css"/>
+<!-- Jquery 3.2.1 -->
+<script href="../../static/bower/jquery/dist/jquery.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser -->
+<script href="../../static/bower/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<!--  Animate JavaScript -->
+<link rel="stylesheet" type="text/css" href="../../static/bower/animate.css/animate.min.css">
+<!--  Swiper JavaScript -->
+<script type="text/javascript" href="../../static/bower/swiper/dist/js/swiper.min.js"></script>
+<!-- JQueyUI CSS for Auto Complete -->
+<link rel="stylesheet" type="text/css" href="../../static/bower/jquery-ui/themes/base/jquery-ui.css">
+<!--jQuery Validation JavaScript-->
+<script type="text/javascript" href="../../static/bower/jquery-validation/dist/jquery.validate.js"></script>
+<!-- JQuery Lazy Load -->
+<script type="text/javascript" href="../../static/bower/jquery-lazy/jquery.lazy.min.js"></script>
+<script type="text/javascript" href="../../static/bower/jquery-lazy/jquery.lazy.plugins.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script href="../../static/mdbootstrap/js/popper.min.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Bootstrap JS -->
+<script href="../../static/mdbootstrap/js/bootstrap.min.js"></script>
+<!--jQuert UI-->
+<script type="text/javascript" href="../../static/bower/jquery-ui/jquery-ui.js"></script>
+<!-- Encrypt Aes -->
+<script type="text/javascript" href="../../static/js/aes.js"></script>
+<script type="text/javascript" href="../../static/js/pbkdf2.js"></script>
+<script type="text/javascript" href="../../static/js/AesUtil.js"></script>
+<!-- My Function JavaScript -->
+<script type="text/javascript" href="../../static/js/myFunction.js"></script>
+<!-- My JavaScript -->
+<script type="text/javascript" href="../../static/js/myApp.js"></script>
+<!-- My JavaScript -->
+<script type="text/javascript" href="../../static/js/backToTop.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" href="../../static/mdbootstrap/js/mdb.min.js" defer></script>
+<script>
+    // Tooltips Initialization
+    $(function () {
+    	$('[data-toggle="tooltip"]').tooltip()
+    })
+
+</script>
+    <!--Angular JS-->
+    <script href="../../static/bower/angular/angular.min.js"></script>
+    <!--Angular Sanitize JS-->
+    <script href="../../static/bower/angular-sanitize/angular-sanitize.min.js"></script>
+    <!--My AngularJS Controller-->
+    <script href="../../static/js/controller/homeController.js"></script>
+    <!--Home AngularJS Service-->
+    <script href="../../static/js/service/WebService.js"></script>
+</head>
+<body  class="body-home">
+<div class="page-wrapper">
+    <!--NavBar-->
+<header class="truyen-header">
+<nav class="navbar navbar-truyen">
+ <div class="container">
+                <div class="navbar-header">
+                        <a href="#" class="navbar-logo hidden-sm hidden-xs"> <img
+                                class="img-fluid" src="#" alt="">
+                        </a>
+                        <a href="#" class="navbar-logo hidden-sm hidden-xs"> 
+                            <!-- <img class="img-fluid" src="../../static/images/logo.png" alt=""> -->
+                        </a>
+                    <a href="#" class="navbar-search-btn js-open-search-box-mobile d-md-block d-lg-none">
+                        <i class="truyen-icon icon-search"></i>
+                    </a>
+                    <div class="navbar-category">
+                        <button class="navbar-category-btn js-open-sidebar">
+                                        <span class="lines">
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                            <span class="line"></span>
+                                        </span>
+                            <span class="hidden-xs hidden-sm">Danh Mục</span>
+                        </button>
+                        <ul class="navbar-category-list">
+                            <li class="col-4 float-left">
+                                <a href="#" title="Truyện Hoàn Thành">Truyện Hoàn Thành</a>
+                            </li>
+                            <li class="col-4 float-left">
+                                <a href="#" title="Truyện Mới">Truyện Mới</a>
+                            </li>
+                            <li class="col-4 float-left">
+                                <a href="#" title="Truyện Vip">Truyện Vip</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-category">
+                        <button class="navbar-category-btn js-open-sidebar">
+                                <span class="lines">
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                    <span class="line"></span>
+                                </span>
+                            <span class="hidden-xs hidden-sm">Thể loại</span>
+                        </button>
+                        <ul class="navbar-category-list">
+                            <li class="col-4 float-left">
+                                <a href="#">Tiên Hiệp</a>
+                            </li>
+                            <li class="col-4 float-left">
+                                <a href="#">Đô Thị</a>
+                            </li>
+                            <li class="col-4 float-left">
+                                <a href="#">Đời Thường</a>
+                            </li>
+                            <li class="col-4 float-left">
+                                <a href="#">Huyền Huyễn</a>
+                            </li>
+                            <li class="col-4 float-left">
+                                <a href="#">Võng Du</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="custom navbar-custom">
+                    <ul class="nav navbar-nav navbar-right" style="flex-direction: row;">
+                        <li>
+                            <div class="search-block">
+                                <div class="actions">
+                                    <button type="submit" title="Tìm kiếm"
+                                            class="search-toggle-btn" id="js-search-toggle">
+                                        <i class="truyen-icon icon-search"></i>
+                                    </button>
+                                </div>
+                                <form id="js-search-panel" class="search-panel" action="#" method="POST">
+                                    <div class="txtDiv">
+                                        <input type="text" name="txtKeyword" id="txtKeyword" value=""
+                                               placeholder="Tên truyện" class="form-control"
+                                               autocomplete="off" required
+                                               oninvalid="this.setCustomValidity('Bạn chưa nhập gì để tìm kiếm!')">
+                                        <button class="btn btn-search mt-0" type="submit">
+                                            <i class="truyen-icon icon-search-primary"></i>
+                                        </button>
+                                        <ul id="ulNoMatch"
+                                            class="ui-autocomplete ui-menu ui-widget1 ui-widget1-content ui-corner-all"
+                                            role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 16;display: none; width:  150px;">
+                                            <li class="ui-menu-item" role="menuitem">
+                                                <a class="ui-corner-all" tabindex="-1">Không Có Truyện Phù Hợp </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="user-block h-100">
+                                <i class="truyen-icon icon-user"></i>
+                                <a href="#"> Đăng nhập </a>
+                                <a class="diver disabled">|</a>
+                                <a href="#"> Đăng ký </a>
+                            </div>
+                        </li>
+                        <li class="dropdown" >
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">
+                                <i class="truyen-icon icon-user"></i>
+                                <span class="truyen-login-title" ></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li ><a href="#">Trang Quản Lý</a></li>
+                                <li><a href="#">Hồ Sơ</a></li>
+                                <li><a href="#">Truyện Theo Dõi</a></li>
+                                <li><a href="#">Quản Lý Truyện</a></li>
+                                <li><a href="#">Nạp Đậu</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a href="#">Thoát</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</header>
+    <aside class="truyen-sidebar">
+        <a href="#" class="sidebar-close js-close-sidebar"></a>
+        <div class="sidebar-container">
+            <div class="sidebar-header" >
+                <div class="user-icon">
+                    <i class="truyen-icon icon-user"></i>
+                </div>
+                <div class="card-menu">
+                    <div class="list-group" style="margin-bottom: 20px;">
+                        <div class="list-group-item list-group-item-sidebar">
+                            <a class="truyen-sidebar-user-title" role="button"
+                               data-toggle="collapse" href="#truyen-user-login-custom"
+                               aria-expanded="false"
+                               aria-controls="truyen-user-login-custom">Đăng nhập /
+                                Đăng ký <span class="truyen-icon icon-white-next"></span>
+                            </a>
+                        </div>
+                        <div class="list-group collapse"
+                                 id="truyen-user-login-custom">
+                            <div
+                                    class="list-group-item list-group-item-sidebar list-group-item-diver"></div>
+                            <div class="list-group-item list-group-item-sidebar">
+                                <a href="@{/danhap}" class="login-btn">Đăng nhập</a>
+                            </div>
+                            <div class="list-group-item list-group-item-sidebar">
+                                <a href="@{/daky}" class="login-btn">Đăng ký</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-header" sec:authorize="isAuthenticated()">
+                <div class="user-icon">
+                    <i class="truyen-icon icon-user"></i>
+                </div>
+    
+                <a if="${#request.userPrincipal != null}" href="@{/logout}" class="user-logout">Thoát</a>
+                <div class="card-menu">
+                    <div class="list-group" style="margin-bottom: 20px;">
+                        <div class="list-group-item list-group-item-sidebar">
+                            <a class="truyen-sidebar-user-title collapsed"
+                               role="button" data-toggle="collapse"
+                               href="#truyen-user-menu-collapse" aria-expanded="false"
+                               aria-controls="truyen-user-menu-collapse" sec:authentication="name"> <span
+                                    class="truyen-icon icon-white-next"></span>
+                            </a>
+                        </div>
+                        <div class="list-group collapse"
+                                 id="truyen-user-menu-collapse">
+                            <div class="list-group-item list-group-item-sidebar list-group-item-diver"></div>
+                            <div class="list-group-item list-group-item-sidebar">
+                                <a href="/tai-khoan/datruyen/">Đăng truyện<span
+                                        class="truyen-icon icon-white-next"></span>
+                                </a>
+                            </div>
+                            <div class="list-group-item list-group-item-sidebar">
+                                <a href="/tai-khoan/theo_doi/">Truyện Theo Dõi<span
+                                        class="truyen-icon icon-white-next"></span>
+                                </a>
+                            </div>
+                            <div class="list-group-item list-group-item-sidebar">
+                                <a href="/account/list_story/">Quản lý truyện<span
+                                        class="truyen-icon icon-white-next"></span></a>
+                            </div>
+                            <div
+                                    class="list-group-item list-group-item-sidebar list-group-item-diver"></div>
+                            <div class="list-group-item list-group-item-sidebar">
+                                <a href="/tai-khoan/tu-truyen/">Tủ truyện<span
+                                        class="truyen-icon icon-white-next"></span></a>
+                            </div>
+                            <div
+                                    class="list-group-item list-group-item-sidebar list-group-item-diver"></div>
+                            <div class="list-group-item list-group-item-sidebar">
+                                <a href="/tai-khoan/">Hồ sơ <span
+                                        class="truyen-icon icon-white-next"></span></a>
+                            </div>
+                            <div
+                                    class="list-group-item list-group-item-sidebar list-group-item-diver"></div>
+                            <div class="list-group-item list-group-item-sidebar">
+                                <a href="/tai-khoan/nap-dau">Nạp Đậu<span
+                                        class="truyen-icon icon-white-next"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-menu">
+                <div class="list-group" style="margin-bottom: 20px;">
+                    <div class="list-group-item list-group-item-action list-group-item-sidebar">
+                        <a href="@{/}"><i class="fas fa-home"></i>Trang chủ
+                            <span class="truyen-icon icon-next"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="list-group" style="margin-bottom: 20px;">
+                    <div class="list-group-item list-group-item-action list-group-item-sidebar">
+                        <a href="@{/danh-muc/moi-cap-nhat}" target="_blank"
+                           title="Truyện Mới"> Truyện Mới <span
+                                class="truyen-icon icon-next"></span>
+                        </a>
+                    </div>
+                    <div class="list-group-item list-group-item-action list-group-item-sidebar">
+                        <a href="@{/danh-muc/truyen-hoan-thanh}" target="_blank"
+                           title="Truyện Hoàn Thành"> Truyện Hoàn Thành <span
+                                class="truyen-icon icon-next"></span>
+                        </a>
+                    </div>
+                    <div class="list-group-item list-group-item-action list-group-item-sidebar">
+                        <a href="@{/danh-muc/truyen-vip}" target="_blank"
+                           title="Truyện Vip"> Truyện Vip <span
+                                class="truyen-icon icon-next"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group" style="margin-bottom: 20px;">
+                <div class="list-group-item list-group-item-action list-group-item-sidebar"
+                         if="${categorylist != null && not #lists.isEmpty(categorylist)}"
+                         each="category,iterStat : ${categorylist}">
+                    <a href="@{'/the-loai/'+${category.id}+'/'+${category.metatitle}}"
+                       title="'Truyện'+${category.name}"
+                    ><span text="${iterStat.index+1}+' - '+${category.name}"></span> <span
+                            class="truyen-icon icon-next"></span></a>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <a href="#" class="truyen-sidebar-overlay js-close-sidebar"></a>
+    <div class="truyen-search-box">
+        <div class="container">
+            <form class="search-box-mobile" method="post" action="@{/search}">
+                <input type="text" id="txtKeywordMobi" name="txtKeyword"
+                       class="form-control" placeholder="Tên truyện hoặc tác giả không dấu" value=""
+                       autocomplete="off" required oninvalid="this.setCustomValidity('Bạn chưa nhập gì để tìm kiếm!')">
+                <button type="submit" class="search-box-mobile-btn"
+                        id="js-search-box-mobile-btn">
+                    <i class="truyen-icon icon-search-primary"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <a href="#" class="truyen-search-box-overlay js-close-search-box"></a>
+    <!--Content-->
+    <div class="truyen-main">
+        <div class="container">
+            <div class="truyen-div div-featured">
+                <div class="featured-content">
+                    <div class="row">
+                        <!-- Đọc Nhiều Nhất -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="block block-editors-choice-slider">
+                                <div class="block-content">
+                                    <div class="editors-choice-slider js-editors-choice-slider">
+                                        <h2 class="shadow-1">TRUYỆN NỔI BẬT</h2>
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide" >
+                                                    <div class="item">
+                                                        <div class="thumb">
+                                                            <a >
+                                                                <img class="img-fluid lazyload" alt="" src="../../static/images/300.png" title="a" width="50px">
+                                                            </a>
+                                                        </div>
+                                                        <div class="info" style ="">
+                                                            <h2 class="title">
+                                                                <a href="#" > Người truy tìm ánh sáng</a>
+                                                            </h2>
+                                                            <span>
+                                                                <span class="fz-16" ></span> người truy cập</span>
+                                                            <div class="description text-center" style="-webkit-line-clamp: 2;">Một bộ truyện hay</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                                                <span class="swiper-pagination-bullet"></span>
+                                                <span class="swiper-pagination-bullet"></span>
+                                                <span class="swiper-pagination-bullet"></span>
+                                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                                                <span class="swiper-pagination-bullet"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Đọc Nhiều 2 3 -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="block">
+                                <div class="block-content">
+                                    <div class="editors-choice-list">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-6 btv-2">
+                                                <div class="item">
+                                                    <a class="thumb" href="#">
+                                                        <img class="img-fluid" src="../../static/images/300.png" >
+                                                    </a>
+                                                    <h2 class="title">
+                                                        <a href="#" > Kẻ truy đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        <span class="text-red fz-16" ></span>người truy cập
+                                                    </div>
+                                                    <div class="description" >Một bộ truyện hay nhất siêu cấp hay hay vô địch siêu cấp vũ trụ hay hay vcl hay vc</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 btv-2">
+                                                <div class="item">
+                                                    <a class="thumb" href="#">
+                                                        <img class="img-fluid" src="../../static/images/300.png" >
+                                                    </a>
+                                                    <h2 class="title">
+                                                        <a href="#" > Kẻ truy đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        <span class="text-red fz-16" ></span>người truy cập
+                                                    </div>
+                                                    <div class="description" >Một bộ truyện hay</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 btv-2">
+                                                <div class="item">
+                                                    <a class="thumb" href="#">
+                                                        <img class="img-fluid" src="../../static/images/300.png" >
+                                                    </a>
+                                                    <h2 class="title">
+                                                        <a href="#" > Kẻ truy đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        <span class="text-red fz-16" ></span>người truy cập
+                                                    </div>
+                                                    <div class="description" >Một bộ truyện hay</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 btv-2">
+                                                <div class="item">
+                                                    <a class="thumb" href="#">
+                                                        <img class="img-fluid" src="../../static/images/300.png" >
+                                                    </a>
+                                                    <h2 class="title">
+                                                        <a href="#" > Kẻ truy đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        <span class="text-red fz-16" ></span>người truy cập
+                                                    </div>
+                                                    <div class="description" >Một bộ truyện hay</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 btv-2">
+                                                <div class="item">
+                                                    <a class="thumb" href="#">
+                                                        <img class="img-fluid" src="../../static/images/300.png" >
+                                                    </a>
+                                                    <h2 class="title">
+                                                        <a href="#" > Kẻ truy đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        <span class="text-red fz-16" ></span>người truy cập
+                                                    </div>
+                                                    <div class="description" >Một bộ truyện hay</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 btv-2">
+                                                <div class="item">
+                                                    <a class="thumb" href="#">
+                                                        <img class="img-fluid" src="../../static/images/300.png" >
+                                                    </a>
+                                                    <h2 class="title">
+                                                        <a href="#" > Kẻ truy đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        <span class="text-red fz-16" ></span>người truy cập
+                                                    </div>
+                                                    <div class="description" >Một bộ truyện hay</div>
+                                                </div>
+                                            </div>
+
+                                           
+                                            <div class="clearfix hidden-xs"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Lịch Sử Đọc -->
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="block block-default block-readers-choice">
+                                <div class="block-header">
+                                    <h2 class="title"> Truyện Đang Đọc </h2>
+                                    <a href="#" class="history-view">Xem tiếp</a>
+                                </div>
+                                
+                                <div class="block-content">
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-group-item-primary-me" >
+                                            <div class="content">  
+                                                
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                               
+                                                <div class="info">
+                                                    <h2 class="title ">
+                                                        <a ng-href="#" >Kẻ theo đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        Đã đọc: 0/20
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="content">  
+                                                
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                               
+                                                <div class="info">
+                                                    <h2 class="title ">
+                                                        <a ng-href="#" >Kẻ theo đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        Đã đọc: 0/20
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="content">  
+                                                
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                               
+                                                <div class="info">
+                                                    <h2 class="title ">
+                                                        <a ng-href="#" >Kẻ theo đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        Đã đọc: 0/20
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="content">  
+                                                
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                               
+                                                <div class="info">
+                                                    <h2 class="title ">
+                                                        <a ng-href="#" >Kẻ theo đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        Đã đọc: 0/20
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="content">  
+                                                
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                               
+                                                <div class="info">
+                                                    <h2 class="title ">
+                                                        <a ng-href="#" >Kẻ theo đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        Đã đọc: 0/20
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                           
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Chương Mới Ra -->
+            <div class="truyen-div">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <div class="block block-default block-list-new">
+                                <div class="block-header">
+                                    <h2 class="title text-uppercase">Mới Cập Nhật</h2>
+                                </div>
+                                <div class="block-content" id="dataTable">
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-group-item-table" >
+                                            <div class="content">
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                                <div class="info">
+                                                    <h2 class="title">
+                                                        <a href="#" >
+                                                            
+                                                            <span class="storyNU.dealStatus == 1?'shadow-2' : ''">Kẻ truy đuổi ánh sáng</span>
+                                                        </a>
+                                                    </h2>
+                                                    <div class="chap">Meo Meo</div>
+                                                    <div class="author">
+                                                        <a  href="#">Chương 01</a>:
+                                                        <!-- Nếu trống chương <a >&nbsp;</a> -->
+                                                    </div>
+                                                    <div class="time">
+                                                        2 Con mèo đại chiến bên bờ hồ bị con quạ bay qua đá xuống sông
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                                <div class="info">
+                                                    <h2 class="title">
+                                                        <a href="#" >
+                                                            
+                                                            <span class="storyNU.dealStatus == 1?'shadow-2' : ''">Kẻ truy đuổi ánh sáng</span>
+                                                        </a>
+                                                    </h2>
+                                                    <div class="chap">Meo Meo</div>
+                                                    <div class="author">
+                                                        <a  href="#">Chương 01</a>:
+                                                        <!-- Nếu trống chương <a >&nbsp;</a> -->
+                                                    </div>
+                                                    <div class="time">
+                                                        2 Con mèo đại chiến bên bờ hồ bị con quạ bay qua đá xuống sông
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                                <div class="info">
+                                                    <h2 class="title">
+                                                        <a href="#" >
+                                                            
+                                                            <span class="storyNU.dealStatus == 1?'shadow-2' : ''">Kẻ truy đuổi ánh sáng</span>
+                                                        </a>
+                                                    </h2>
+                                                    <div class="chap">Meo Meo</div>
+                                                    <div class="author">
+                                                        <a  href="#">Chương 01</a>:
+                                                        <!-- Nếu trống chương <a >&nbsp;</a> -->
+                                                    </div>
+                                                    <div class="time">
+                                                        2 Con mèo đại chiến bên bờ hồ bị con quạ bay qua đá xuống sông
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                                <div class="info">
+                                                    <h2 class="title">
+                                                        <a href="#" >
+                                                            
+                                                            <span class="storyNU.dealStatus == 1?'shadow-2' : ''">Kẻ truy đuổi ánh sáng</span>
+                                                        </a>
+                                                    </h2>
+                                                    <div class="chap">Meo Meo</div>
+                                                    <div class="author">
+                                                        <a  href="#">Chương 01</a>:
+                                                        <!-- Nếu trống chương <a >&nbsp;</a> -->
+                                                    </div>
+                                                    <div class="time">
+                                                        2 Con mèo đại chiến bên bờ hồ bị con quạ bay qua đá xuống sông
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                                <div class="info">
+                                                    <h2 class="title">
+                                                        <a href="#" >
+                                                            
+                                                            <span class="storyNU.dealStatus == 1?'shadow-2' : ''">Kẻ truy đuổi ánh sáng</span>
+                                                        </a>
+                                                    </h2>
+                                                    <div class="chap">Meo Meo</div>
+                                                    <div class="author">
+                                                        <a  href="#">Chương 01</a>:
+                                                        <!-- Nếu trống chương <a >&nbsp;</a> -->
+                                                    </div>
+                                                    <div class="time">
+                                                        2 Con mèo đại chiến bên bờ hồ bị con quạ bay qua đá xuống sông
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                                <div class="info">
+                                                    <h2 class="title">
+                                                        <a href="#" >
+                                                            
+                                                            <span class="storyNU.dealStatus == 1?'shadow-2' : ''">Kẻ truy đuổi ánh sáng</span>
+                                                        </a>
+                                                    </h2>
+                                                    <div class="chap">Meo Meo</div>
+                                                    <div class="author">
+                                                        <a  href="#">Chương 01</a>:
+                                                        <!-- Nếu trống chương <a >&nbsp;</a> -->
+                                                    </div>
+                                                    <div class="time">
+                                                        2 Con mèo đại chiến bên bờ hồ bị con quạ bay qua đá xuống sông
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <a class="thumb" href="#">
+                                                    <img class="img-fluid" src="../../static/images/300.png" >
+                                                </a>
+                                                <div class="info">
+                                                    <h2 class="title">
+                                                        <a href="#" >
+                                                            
+                                                            <span class="storyNU.dealStatus == 1?'shadow-2' : ''">Kẻ truy đuổi ánh sáng</span>
+                                                        </a>
+                                                    </h2>
+                                                  
+                                                    <div class="chap">Meo Meo</div>
+                                                    <div class="author">
+                                                        <a  href="#">Chương 01</a>:
+                                                        <!-- Nếu trống chương <a >&nbsp;</a> -->
+                                                    </div>
+                                                    <div class="time">
+                                                        2 Con mèo đại chiến bên bờ hồ bị con quạ bay qua đá xuống sông
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div>
+                                        <a href="#" class="float-right cnt-view">Xem tiếp</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Truyện Hoàn Thành -->
+        <div class="truyen-div div-featured">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-8">
+                        <div class="block block-default">
+                            <div class="block-header">
+                                <h2 class="title text-uppercase">Truyện Đã Hoàn Thành</h2>
+                            </div>
+                            <div class="block-content">
+                                <div class="editors-choice-list">
+                                    <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-6 btv-2">
+                                                <div class="item">
+                                                    <a class="thumb" href="#">
+                                                        <img class="img-fluid" src="../../static/images/300.png" >
+                                                    </a>
+                                                    <h2 class="title">
+                                                        <a href="#" > Kẻ truy đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        <span class="text-red fz-16" ></span>người truy cập
+                                                    </div>
+                                                    <div class="description" >Một bộ truyện hay</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 btv-2">
+                                                <div class="item">
+                                                    <a class="thumb" href="#">
+                                                        <img class="img-fluid" src="../../static/images/300.png" >
+                                                    </a>
+                                                    <h2 class="title">
+                                                        <a href="#" > Kẻ truy đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        <span class="text-red fz-16" ></span>người truy cập
+                                                    </div>
+                                                    <div class="description" >Một bộ truyện hay</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 btv-2">
+                                                <div class="item">
+                                                    <a class="thumb" href="#">
+                                                        <img class="img-fluid" src="../../static/images/300.png" >
+                                                    </a>
+                                                    <h2 class="title">
+                                                        <a href="#" > Kẻ truy đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        <span class="text-red fz-16" ></span>người truy cập
+                                                    </div>
+                                                    <div class="description" >Một bộ truyện hay</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-6 btv-2">
+                                                <div class="item">
+                                                    <a class="thumb" href="#">
+                                                        <img class="img-fluid" src="../../static/images/300.png" >
+                                                    </a>
+                                                    <h2 class="title">
+                                                        <a href="#" > Kẻ truy đuổi ánh sáng</a>
+                                                    </h2>
+                                                    <div class="view text-secondary">
+                                                        <span class="text-red fz-16" ></span>người truy cập
+                                                    </div>
+                                                    <div class="description" >Một bộ truyện hay</div>
+                                                </div>
+                                            </div>
+                                           
+                                          
+                                       
+                                        <div class="clearfix hidden-xs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Top Tác Giả -->
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <div class="block block-default block-readers-choice">
+                            <div class="block-header"><h2 class="title"> Top Tác Giả</h2></div>
+                            <div class="block-content">
+                                <ul class="list-group">
+                                    <li  class="list-group-item list-group-item-primary-me" class="$index==0?'item-featured':''">
+                                        <div class="content">
+                                            <div class="index ">1</div>
+                                            <div class="info">
+                                                <h2 class="title">
+                                                    <a href="#" >Meo Meo Siêu Cấp Đại Lão</a>
+                                                </h2>
+                                                <div class="view text-secondary" >
+                                                    Số Truyện: <span class="text-red fz-16">1</span>
+                                                </div>
+                                                <div class="extra-info">
+                                                    <p>Số Chương đã đăng: 10</p>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="content">
+                                            <div class="index ">2</div>
+                                            <div class="info">
+                                                <h2 class="title">
+                                                    <a href="#" >Meo Meo Siêu Cấp Nhị Lão</a>
+                                                </h2>
+                                                <div class="view text-secondary" >
+                                                    Số Truyện: <span class="text-red fz-16">1</span>
+                                                </div>
+                                                <div class="extra-info">
+                                                    <p>Số Chương đã đăng: 10</p>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="content">
+                                            <div class="index ">3</div>
+                                            <div class="info">
+                                                <h2 class="title">
+                                                    <a href="#" >Meo Meo Siêu Cấp Tam Lão</a>
+                                                </h2>
+                                                <div class="view text-secondary" >
+                                                    Số Truyện: <span class="text-red fz-16">1</span>
+                                                </div>
+                                                <div class="extra-info">
+                                                    <p>Số Chương đã đăng: 10</p>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="truyen-footer">
+    <div id="footer">
+        <div class="container footer-con">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-12 col-sm-12 col-md-4">
+                    <h5>Giới thiêu</h5>
+                    <hr class="bg-truyen mb-2 mt-0 d-inline-block mx-auto w-50">
+                    <p text="${information.introduce}">
+
+                    </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4">
+                    <h5>Hỗ trợ</h5>
+                    <hr class="bg-truyen mb-2 mt-0 d-inline-block mx-auto w-50">
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="#" target="_blank"><span class="block-list-icon">
+                                <i class="truyen-icon icon-mobile mr-3"></i></span> Ứng dụng Truyện Online</a></li>
+                        <li><a href="#"><span class="block-list-icon"><i
+                                class="truyen-icon icon-warning mr-3"></i></span>Báo lỗi ứng dụng</a></li>
+                        <li><a href="#"><span class="block-list-icon"><i
+                                class="truyen-icon icon-faq mr-3"></i></span> FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4">
+                    <h5>Liên hệ</h5>
+                    <hr class="bg-truyen mb-2 mt-0 d-inline-block mx-auto w-50">
+                    <ul class="list-unstyled quick-links">
+                        <li>
+                            <a href="#">
+                                <span class="block-list-icon">
+                                    <i class="truyen-icon icon-email mr-3"></i>
+                                </span> Email: <span>motconvit@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="block-list-icon">
+                                    <i class="truyen-icon icon-mobile mr-3"></i>
+                                </span>
+                                Phone: <span>09999999999</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer -->
+</body>
+</html>
